@@ -10,17 +10,18 @@ chc = '~ ! @ # $ % ^ & * ( ) _ + ` - = { } [ ] : ; < > . / '
 pas = ""
 cmin = 4
 cdef = 8
-cmax = 8
+cmax = 100
+clen = cdef
 
 pass_ch = (chnum+chstr+chc+chstr.upper()).split()
 
 while True:
 	try:
-		cmax = int(input("Enter password length[min:"+str(cmin)+";def:"+str(cdef)+"]: "))
-		if cmax == "": cmax = 6
+		clen = int(input("Enter password length[MIN:"+str(cmin)+";MAX:"+str(cmax)+";DEF:"+str(cdef)+"]: "))
+		if clen == "": clen = cdef
 	except ValueError: pass
-	if cmax >= cmin: break
+	if clen >= cmin and clen <= cmax: break
 
-for ch in range(0,cmax):
+for ch in range(0,clen):
 	pas = pas+choice(pass_ch)
 print(pas)
