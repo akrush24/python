@@ -15,9 +15,6 @@ num = randint(0, max)
 
 ynum = -1
 
-def inp():
-	int(input("You num (0..."+str(max)+"):"))
-
 while num != ynum:
 	ynumold = ynum
 	while True:

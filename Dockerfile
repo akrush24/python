@@ -8,6 +8,7 @@ set nocompatible\n\
 set number\n\
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE\n'\
 >> ~/.vimrc
+RUN echo 'cd /home/akrush/py' >> ~/.bashrc
 
 EXPOSE 8080
 VOLUME ["/home/akrush/py"]
