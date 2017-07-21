@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-#######################
-#Guess the number
-#######################
+########################
+#   Guess the number   #
+########################
 
 from random import randint
 
