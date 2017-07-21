@@ -2,6 +2,7 @@
 FROM ubuntu:latest
 MAINTAINER Andrey <akrush24@gmail.com>
 RUN apt-get update \
+ && apt-get upgrade \
  && apt-get install -y python3 vim bash-completion
 RUN echo 'set tabstop=3\n\
 set nocompatible\n\
@@ -10,5 +11,4 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 >> ~/.vimrc
 RUN echo 'cd /home/akrush/py' >> ~/.bashrc
 
-EXPOSE 8080
 VOLUME ["/home/akrush/py"]

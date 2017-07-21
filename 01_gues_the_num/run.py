@@ -5,18 +5,18 @@
 
 from random import randint
 
-min = 100
+min = 5
 while True:
 	try:
 		max = int(input("Input max number (more than "+str(min)+"):"))
-		if max > 10:
+		if max > min:
 			break
 	except ValueError: pass
 
 num = randint(0, max)
 
 ynum = -1
-att = []
+atts = []
 
 while num != ynum:
 	ynumold = ynum
@@ -27,12 +27,17 @@ while num != ynum:
 			break
 	if ynum > num:
 		print("More...")
-		att.append(ynum)
+		atts.append(ynum)
 	elif ynum < num:
 		print("Less...")
-		att.append(ynum)
+		atts.append(ynum)
 	else :
 		print("\nCongratulations!\n\tYou WIN!\n\tMy NUM is "+str(num)+"\n")
-		print("Attempts count:["+str(len(att))+"]\n"+str(att)+"\n")
+		print("Attempts count:["+str(len(atts))+"]\n")
+		i = 0
+		for att in atts:
+			i += 1
+			print(str(i)+":"+str(att))
+		print ("\n")
 
 print("End Of Game...\n")
