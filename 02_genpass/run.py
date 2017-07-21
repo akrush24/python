@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 
-from random import randint ran
+from random import randint
+from random import getrandbits
+from random import sample
 
-pas=""
-max = 6
-for i in range(0, max):
-	pas = pas+str(randint(0, 9))
+chnum = "0 1 2 3 4 5 6 7 8 9"
+chstr = "a b c d e f j"
+chc = "?&#@%^"
+
+pas = ""
+
+for ch in sample((chstr+chstr+chc).split(),4):
+	pas = pas+ch
 print(pas)
-print(random.getrandbits(10))
