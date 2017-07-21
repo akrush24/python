@@ -1,7 +1,13 @@
-# Version: 0.0.1
-FROM ubuntu:16.04
+# Version: 0.0.2
+FROM ubuntu:latest
 MAINTAINER Andrey <akrush24@gmail.com>
-RUN apt-get update
-RUN apt-get install -y python3 vim bash-completion openssh-client git
-#EXPOSE 2222
+RUN apt-get update \
+ && apt-get install -y python3 vim bash-completion
+RUN echo 'set tabstop=3\n\
+set nocompatible\n\
+set number\n\
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE\n'\
+>> ~/.vimrc
+
+EXPOSE 8080
 VOLUME ["/home/akrush/py"]

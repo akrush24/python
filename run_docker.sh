@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run --name py -v /home/akrush/py/:/home/akrush/py/ -t akrush/edu
+docker run -v /home/akrush/py/:/home/akrush/py/ -d -t akrush/edu
