@@ -21,7 +21,7 @@ atts = []
 while num != ynum:
 	ynumold = ynum
 	while True:
-		try: ynum = int(input("You num (0..."+str(max)+"):"))
+		try: ynum = int(input("Enter You number (0..."+str(max)+"):"))
 		except ValueError: pass
 		if ynum != ynumold:
 			break
@@ -32,7 +32,7 @@ while num != ynum:
 		print("Less...")
 		atts.append(ynum)
 	else :
-		print("\nCongratulations!\n\tYou WIN!\n\tMy NUM is "+str(num)+"\n")
+		print("\nCongratulations!\n\tYou WIN!\n\tMy number is "+str(num)+"\n")
 		print("Attempts count:["+str(len(atts))+"]\n")
 		i = 0
 		for att in atts:
