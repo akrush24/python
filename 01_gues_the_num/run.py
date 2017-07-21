@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
+#######################
 #Guess the number
+#######################
 
 from random import randint
 
-min = 10
+min = 100
 while True:
 	try:
-		max = int(input("input max number (more than "+str(min)+"):"))
+		max = int(input("Input max number (more than "+str(min)+"):"))
 		if max > 10:
 			break
 	except ValueError: pass
@@ -14,6 +16,7 @@ while True:
 num = randint(0, max)
 
 ynum = -1
+att = []
 
 while num != ynum:
 	ynumold = ynum
@@ -23,10 +26,13 @@ while num != ynum:
 		if ynum != ynumold:
 			break
 	if ynum > num:
-		print("More... =(")
+		print("More...")
+		att.append(ynum)
 	elif ynum < num:
-		print("Less... =(")
+		print("Less...")
+		att.append(ynum)
 	else :
 		print("\nCongratulations!\n\tYou WIN!\n\tMy NUM is "+str(num)+"\n")
+		print("Attempts count:["+str(len(att))+"]\n"+str(att)+"\n")
 
-print("End Of Game...")
+print("End Of Game...\n")
