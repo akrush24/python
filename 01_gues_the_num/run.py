@@ -17,6 +17,8 @@ num = randint(0, max)
 
 ynum = -1
 atts = []
+i = 0
+att = 0
 
 while num != ynum:
 	ynumold = ynum
@@ -32,9 +34,10 @@ while num != ynum:
 		print("Less...")
 		atts.append(ynum)
 	else :
+		atts.append(ynum)
 		print("\nCongratulations!\n\tYou WIN!\n\tMy number is "+str(num)+"\n")
 		print("Attempts count:["+str(len(atts))+"]\n")
-		i = 0
+
 		for att in atts:
 			i += 1
 			print(str(i)+":"+str(att))
