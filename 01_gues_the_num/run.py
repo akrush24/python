@@ -7,17 +7,16 @@ from random import randint
 
 min = 5
 
+while True:
+	try:
+		max = int(input("Input max number (more than "+str(min)+"):"))
+		if max > min:
+			break
+	except ValueError:
+		print("ValueError: Please try again.")
+		pass
+
 while True: 
-
-	while True:
-		try:
-			max = int(input("Input max number (more than "+str(min)+"):"))
-			if max > min:
-				break
-		except ValueError:
-			print("ValueError: Please try again.")
-			pass
-
 	num = randint(0, max)
 	ynum = -1
 	atts = []
