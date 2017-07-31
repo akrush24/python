@@ -7,9 +7,9 @@ RUN pip3 install --upgrade pip
 RUN echo 'set tabstop=3\n\
 set nocompatible\n\
 set number\n\
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE\n'\
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE\n\
 set list\n\
-set listchars=tab:>-\n\
+set listchars=tab:>-\n'\
 >> ~/.vimrc
 RUN echo 'cd /home/akrush/py' >> ~/.bashrc
 
