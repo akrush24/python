@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 MAINTAINER Andrey <akrush24@gmail.com>
 RUN apt-get update \
- && apt-get upgrade \
+ && apt-get upgrade -y \
  && apt-get install -y python3 vim bash-completion pip3-python
 RUN pip3 install --upgrade pip
 RUN echo 'set tabstop=3\n\
