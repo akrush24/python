@@ -3,7 +3,7 @@ FROM ubuntu:latest
 MAINTAINER Andrey <akrush24@gmail.com>
 RUN apt-get update \
  && apt-get upgrade -y \
- && apt-get install -y python3 vim bash-completion pip3-python
+ && apt-get install -y python3 vim bash-completion python3-pip
 RUN pip3 install --upgrade pip
 RUN echo 'set tabstop=3\n\
 set nocompatible\n\
