@@ -4,46 +4,57 @@
 ########################
 
 from random import randint
+name = ""
 
-min = 5
+min = 100
+
+def hello(name):
+	print("Hello "+name+"!\n")
+
+while name is "":
+	name = input("Print you name: ")
+
+hello(name)
 
 while True:
 	try:
 		max = int(input("Input max number (more than "+str(min)+"):"))
-		if max > min:
+		if max >= min:
 			break
+		elif max < min:
+			print("You type number less than "+str(min))
 	except ValueError:
 		print("ValueError: Please try again.")
 		pass
 
 while True: 
-	num = randint(0, max)
-	ynum = -1
+	num = randint(0, max) #generation a random number
+	you_num = -1
 	atts = []
 	i = 0
 	att = 0
 
-	while num != ynum:
-		ynumold = ynum
+	while num != you_num:
+		you_numold = you_num
 
 		while True:
 			try:
-				ynum = int(input("Enter number (0..."+str(max)+"):"))
+				you_num = int(input("Enter number (0..."+str(max)+"):"))
 			except ValueError:
 				print("ValueError: Please try again.")
 				pass
-			if ynum != ynumold:
+			if you_num != you_numold:
 				break
 			else:
 				print("Enter new value")
-		if ynum > num:
+		if you_num > num:
 			print("More...")
-			atts.append(ynum)
-		elif ynum < num:
+			atts.append(you_num)
+		elif you_num < num:
 			print("Less...")
-			atts.append(ynum)
+			atts.append(you_num)
 		else:
-			atts.append(ynum)
+			atts.append(you_num)
 			print("\nCongratulations!\n\tYou WIN!\n\tMy number is "+str(num)+"\n")
 			print("Attempts count:["+str(len(atts))+"]\n")
 			for att in atts:
@@ -51,10 +62,8 @@ while True:
 				print(str(i)+":"+str(att))
 			print ("\n")
 
-	game = input("Do you want play agen?\n[Y/N]:")
+	game = input("Do you want play agen?\nType [Y/N]:")
 	if game != "Y":
 		break
 
 print("End Of Game...\n")
-
-
